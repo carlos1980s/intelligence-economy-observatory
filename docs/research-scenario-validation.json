@@ -1,0 +1,15 @@
+{
+  "validated_at_utc": "2026-10-29T06:29:17.418643+00:00",
+  "fixtures_passed": 3,
+  "random_parameter_sets_passed": 10000,
+  "random_seed": 1031,
+  "verified": [
+    "market clearing",
+    "capacity feasibility",
+    "binding-capacity scarcity pricing",
+    "cost comparative statics",
+    "demand-scale comparative statics",
+    "capacity comparative statics"
+  ],
+  "limit": "This validates the scenario algebra only, not the economic assumptions or production website code."
+}

@@ -1,0 +1,236 @@
+{
+  "contract_version": "2026-10-29.2",
+  "purpose": "Observed input and offered-price indicators beside a conditional, normalized useful-intelligence equilibrium scenario; never a measured macro curve",
+  "evidence_classes": [
+    "observed",
+    "derived",
+    "calibrated",
+    "scenario",
+    "not_identified"
+  ],
+  "required_observation_fields": [
+    "source_id",
+    "source_url",
+    "retrieved_at_utc",
+    "observation_period_start",
+    "observation_period_end",
+    "published_at_utc",
+    "effective_at_utc",
+    "unit",
+    "currency",
+    "geography",
+    "population",
+    "series_definition_version",
+    "evidence_class",
+    "raw_sha256",
+    "value",
+    "status",
+    "license_note"
+  ],
+  "required_metadata_null_rule": "Unknown publication or effective dates are null, never populated with retrieval time. Model creation timestamp is not price effective date.",
+  "sources": [
+    {
+      "source_id": "aws_ec2_public_price_files",
+      "endpoint": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/index.json",
+      "documentation": "https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/using-the-aws-price-list-bulk-api-fetching-price-list-files-manually.html",
+      "no_key_access_test": "GET succeeded 2026-10-29; distinguish public files from signed AWS Query/Bulk API operations",
+      "observed_publication_at_utc": "2026-10-28T18:03:52Z",
+      "observed_current_version": "20261028180352",
+      "cadence": "Check daily; keep versioned observations, not artificial daily changes",
+      "filters": [
+        "Exact precommitted region and instanceType",
+        "Linux",
+        "Shared tenancy",
+        "No preinstalled paid software",
+        "OnDemand",
+        "USD per Hrs",
+        "Exclude capacity-reservation, host, unused capacity and special variants unless explicitly part of basket"
+      ],
+      "series_label": "AWS fixed-basket on-demand rental list-price index",
+      "is_global_gpu_price": false,
+      "license_note": "AWS public informational price files; retain source and pricing disclaimer. This is not an open-data blanket licensing assertion."
+    },
+    {
+      "source_id": "openrouter_models",
+      "endpoint": "https://openrouter.ai/api/v1/models",
+      "documentation": "https://openrouter.ai/docs/api/api-reference/models/list-all-models-and-their-properties",
+      "no_key_access_test": "GET succeeded 2026-10-29 at approximately 06:16:50 UTC; 457 model rows",
+      "cadence": "Daily cached snapshot",
+      "units": "pricing.prompt and pricing.completion are USD per token; multiply by 1000000 for displayed per-million rates",
+      "required_identity": [
+        "id",
+        "canonical_slug",
+        "service_variant",
+        "pricing_tier",
+        "input_modality",
+        "output_modality",
+        "tokenizer",
+        "reasoning_configuration"
+      ],
+      "offered_price_cost_formula": "request_usd = n_uncached_input*price_prompt + n_cached_input*price_cache_read + n_output_billed*price_completion + separately_billed_reasoning_cost + tool_cost + request_fees; never double-count reasoning already included in billed completion tokens",
+      "fixed_mix_proxy_formula": "blended_usd_per_million = 1000000*(0.75*price_prompt+0.25*price_completion)",
+      "fixed_mix_proxy_limit": "A declared 3:1 token mix, not equal task workload across tokenizers and not all-in useful-task cost; tools, cache, reasoning beyond fixed output and human labor excluded",
+      "history": "Start prospective history at first captured snapshot; model created date does not backfill prices",
+      "default_exclusions": [
+        "free routes",
+        "auto routers",
+        "unknown/negative prices",
+        "batch variants unless a separate panel",
+        "non-text output",
+        "context above base pricing threshold",
+        "routes requiring an unspecified provider configuration",
+        "Time/day-dependent pricing overrides unless evaluated against an explicit fixed request schedule"
+      ],
+      "failure": "On auth/rate/schema failure, preserve last-good snapshot and show stale or unavailable; do not manufacture data or create an account",
+      "license_note": "Official overview describes metadata as freely available and intended for production integration. This supports API-based factual indicators, not an assertion of a blanket open-data corpus redistribution license. Publish limited price fields with attribution, not copied descriptions or a bulk mirror.",
+      "overview_documentation": "https://openrouter.ai/docs/guides/overview/models",
+      "universe": "Default endpoint returns text-output models, not all modalities; 457 was the direct snapshot row count.",
+      "provider_caveat": "Top-level pricing comes from the top provider. Provider identity/configuration can change, so a fixed model-ID list is not a fixed-provider quality-controlled basket.",
+      "pricing_override_rules": "Prompt threshold comparison is strictly greater than min_prompt_tokens. Multiple matching entries resolve per key with later entries winning. UTC/day windows can change current top-level prices; normalize a fixed schedule or exclude these entries."
+    },
+    {
+      "source_id": "bls_public_v1",
+      "endpoint": "https://api.bls.gov/publicAPI/v1/timeseries/data/",
+      "documentation": "https://www.bls.gov/developers/home.htm",
+      "no_key_access_test": "Official documentation explicitly supports unregistered version 1; specific series runtime test required",
+      "use": "Wage/inflation context only. OEWS detailed occupation employment/payroll uses separately versioned public files, not a made-up series ID.",
+      "cadence": "Publication-driven",
+      "not_demand_curve": true
+    },
+    {
+      "source_id": "census_btos",
+      "endpoint": "https://www.census.gov/hfp/btos/data_downloads",
+      "access": "Public official XLSX downloads; resolve current URLs from official download page, not guessed API routes",
+      "cadence": "Biweekly core survey releases; preserve publication and reference periods",
+      "series_break": "November 2025 AI question changed from producing goods/services to any business function; split histories and labels at exact questionnaire effective period",
+      "not_demand_curve": true,
+      "status": "download page JS-only in text retrieval; no XLSX bytes fetched in this research pass"
+    },
+    {
+      "source_id": "artificial_analysis_optional",
+      "endpoint": "https://artificialanalysis.ai/api/v2/data/llms/models",
+      "status": "disabled_rights_and_credentials_gate",
+      "access": "Account/API key required; no account created",
+      "rights_source": "https://artificialanalysiscdn.com/legal/ProDataPlatformTerms.pdf",
+      "rights_version": "1.1, revised 2026-08-19",
+      "restriction": "Do not redistribute raw JSON/tabular data or enable customer-facing benchmarking dashboards without reviewed permission; attributed charts/brief citations have separate terms"
+    },
+    {
+      "source_id": "silicon_data_context",
+      "endpoint": "https://www.silicondata.com/products/silicon-index/h100",
+      "status": "context_only_no_live_adapter",
+      "access": "Dated public display accessible; API access tiers and key required",
+      "restriction": "No general public redistribution grant verified; page contains conflicting dated series and undated FAQ, so never scrape generic first-number text"
+    },
+    {
+      "source_id": "genai_adoption_tracker_context",
+      "endpoint": "https://www.genaiadoptiontracker.com/",
+      "status": "context_observations_only",
+      "reference_period": "2026-08",
+      "population": "U.S. working-age adults 18-64; work indicators use employed respondents",
+      "observed_card_values_percent": {
+        "working_age_adults_using_genai": 60.8,
+        "employed_using_genai_for_work": 40.5,
+        "total_work_hours_using_genai": 5.3,
+        "self_reported_total_work_hours_saved": 2.1
+      },
+      "restriction": "Published survey estimates; preserve question/denominator and release; not task quantity or causal productivity; no automated public data feed/redistribution rights verified in this pass"
+    }
+  ],
+  "v1_equilibrium": {
+    "evidence_class": "scenario",
+    "label": "Conditional equilibrium scenario \u2014 not an observed market estimate",
+    "x_axis": "Useful-task basket quantity index (reference scenario = 100)",
+    "y_axis": "Price per useful-task basket index (reference scenario = 100)",
+    "scope": "One aggregate illustrative basket with quality, latency and risk constraints held fixed; neither absolute world output nor dollars",
+    "demand": "q_d(p)=A*p^(-epsilon)",
+    "supply": "q_s(p)=min(K, B*(p/c)^(eta))",
+    "interior_price": "p_u=(A/B)^(1/(epsilon+eta))*c^(eta/(epsilon+eta))",
+    "interior_quantity": "q_u=A*p_u^(-epsilon)",
+    "equilibrium": "If q_u<=K, (q*,p*)=(q_u,p_u). Otherwise q*=K and p*=(A/K)^(1/epsilon).",
+    "marginal_cost_at_cap": "c*(K/B)^(1/eta)",
+    "scarcity_rent_per_unit": "max(0,p*-c*(K/B)^(1/eta)) when cap binds; zero otherwise",
+    "cost_shifter": "c=(observed_fixed_basket_gpu_price_index/100)^rho; this is assumed pass-through, not estimated marginal cost. Do not combine API output price and GPU input price as independent costs.",
+    "parameters": {
+      "A": {
+        "default": 1,
+        "range": [
+          0.25,
+          4
+        ],
+        "class": "scenario",
+        "meaning": "Demand scale, not inferred from adopter share"
+      },
+      "epsilon": {
+        "default": 1,
+        "range": [
+          0.25,
+          3
+        ],
+        "class": "scenario",
+        "meaning": "Positive absolute demand price elasticity, not estimated"
+      },
+      "B": {
+        "default": 1,
+        "range": [
+          0.25,
+          4
+        ],
+        "class": "scenario",
+        "meaning": "Supply productivity/scale excluding cost shifter"
+      },
+      "eta": {
+        "default": 1,
+        "range": [
+          0.25,
+          3
+        ],
+        "class": "scenario",
+        "meaning": "Positive supply elasticity, not estimated"
+      },
+      "K": {
+        "default": 1.5,
+        "range": [
+          0.25,
+          4
+        ],
+        "class": "scenario",
+        "meaning": "Deliverable annual useful-task capacity relative to reference; not measured world GW"
+      },
+      "rho": {
+        "default": 1,
+        "range": [
+          0,
+          1
+        ],
+        "class": "scenario",
+        "meaning": "Assumed pass-through of rental-price change to unit supply cost"
+      }
+    },
+    "uncertainty": "Show named sensitivity scenarios or an assumption envelope. Do not label arbitrary parameter ranges as confidence or credible intervals.",
+    "normalization": "Reference A=B=c=1 and K>=1 yields q=p=1, shown as 100. This is a unit convention, not empirical calibration.",
+    "cost_shifter_caveat": "Rental price is itself an upstream equilibrium price, not a causally exogenous supply shock. The pass-through experiment is explicitly conditional."
+  },
+  "release_tests": [
+    "The observed-price panel never uses labels global intelligence price, useful tasks measured, or measured equilibrium.",
+    "All plotted observations carry reference date, retrieval time, source and evidence class; stale snapshots remain visibly stale.",
+    "Every default quantity/capacity/elasticity scenario parameter remains labeled assumed, even when one cost input is live.",
+    "Baseline A=B=c=1,K=1.5,epsilon=eta=1 returns q=p=1.",
+    "No-cap A=B=1,epsilon=eta=1,c=0.81 returns p=0.9,q=1/0.9.",
+    "Capacity case A=4,B=c=1,epsilon=eta=1,K=1.5 returns q=1.5,p=4/1.5; price exceeds marginal cost 1.5.",
+    "Higher c weakly lowers q and weakly raises p; higher A weakly raises q and raises p; larger K never lowers q.",
+    "Reject nonfinite/nonpositive A,B,c,K,epsilon,eta and out-of-bound rho.",
+    "Do not calculate demand elasticity by regressing usage on simultaneously determined price without a valid identification design.",
+    "Missing fixed-basket items never silently drop or reweight; report coverage and stop index or label a separate matched-sample index.",
+    "Changing a canonical model version, pricing tier, geography, latency constraint or token accounting creates a new series or explicit bridge.",
+    "Batch/free/cache tiers never mix with uncached synchronous base prices.",
+    "Preserve unknown price effective dates as null; no fabricated model-age price history.",
+    "Prevent future-source/look-ahead leakage in historical backtests; only data published by historical cutoff may enter.",
+    "Do not count total data-center electricity, announced projects, training compute, GPU TDP or list inventory as deployable inference capacity.",
+    "API public access and source code license are not treated as blanket redistribution rights.",
+    "An unchanged model alias/canonical slug does not prove immutable model quality. If a service alias is used, label service-basket price only; do not claim fixed model quality.",
+    "Count default OpenRouter rows as text-output listings, never all modalities or total market size.",
+    "A provider switch must be visible and must not be silently treated as fixed-provider inflation.",
+    "Test prompt override threshold equality, UTC midnight wrap, weekday schedules and unknown condition fields; if unsupported exclude the affected entry rather than misprice it."
+  ]
+}

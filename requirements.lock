@@ -1,0 +1,2 @@
+# Python 3.14.7, standard library only. No third-party runtime or test dependencies.
+# Reproduce with the exact interpreter version in .python-version.

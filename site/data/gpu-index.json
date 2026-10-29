@@ -1,0 +1,24 @@
+{
+  "series": "AWS core five fixed-basket on-demand rental list-price index",
+  "value": 84.59609438567942,
+  "base_period": "2024-10",
+  "terminal_period": "2026-10",
+  "evidence_class": "derived",
+  "observed_input_class": "observed archived bundled tariffs",
+  "retrieved_at_utc": null,
+  "published_at_utc": "2026-10-27T19:30:04Z",
+  "effective_at_utc": "2026-10-01T00:00:00Z",
+  "coverage": 1,
+  "providers": 1,
+  "unit": "index; base=100",
+  "source_urls": [
+    "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/20261027193004/us-east-1/index.csv",
+    "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/20261027193004/us-east-1/index.csv",
+    "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/20261027193004/us-east-1/index.csv",
+    "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/20261027193004/us-east-1/index.csv",
+    "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/20261027193004/us-east-1/index.csv"
+  ],
+  "input_hash": "1d5bf54e9bdec82cd96962d631316d48a04d52da9f77177d811e33ebb6a1d8f9",
+  "hash_scope": "supplied research extraction, not independently fetched full AWS archive",
+  "capacity_verified": false
+}

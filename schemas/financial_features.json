@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "features": [
+    {"name":"nvda_revenue_yoy","block":"NVIDIA","company":"NVDA","tag":"Revenues","unit":"USD","kind":"annual_flow_yoy","business_definition":"consolidated NVIDIA revenue proxy; not GPU shipment or rental price","enabled":true},
+    {"name":"avgo_revenue_yoy","block":"Broadcom","company":"AVGO","tag":"RevenueFromContractWithCustomerExcludingAssessedTax","unit":"USD","kind":"annual_flow_yoy","business_definition":"consolidated Broadcom revenue including non-AI businesses; not XPU segment revenue","enabled":true},
+    {"name":"crwv_revenue_yoy","block":"neocloud_CoreWeave","company":"CRWV","tag":"RevenueFromContractWithCustomerExcludingAssessedTax","unit":"USD","kind":"annual_flow_yoy","business_definition":"consolidated CoreWeave revenue; not fleet utilization or rental rate","enabled":true},
+    {"name":"nbis_revenue_yoy","block":"neocloud_Nebius","company":"NBIS","tag":"Revenues","unit":"USD","kind":"annual_flow_yoy","business_definition":"unqualified continuing-business perimeter and currency breaks; never splice automatically","enabled":false}
+  ],
+  "max_acceptance_age_days": 550,
+  "release_rule":"max(SEC acceptance timestamp, filed_date end of UTC day); missing acceptance excluded",
+  "origin_rule":"features known by end of month before target month",
+  "growth_rule":"same accession, unit, tag and business definition; 330-380 day flow durations; fiscal ends 300-430 days apart"
+}

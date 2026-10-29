@@ -1,0 +1,31 @@
+{
+  "deliverable_files": [
+    {
+      "name": "research_study.md",
+      "bytes": 29777,
+      "sha256": "38542ec9b61a8d8c5c70abe23f097e6339e8b6dc46501d66ace7b38b1632df78"
+    },
+    {
+      "name": "implementation_contract.json",
+      "bytes": 13411,
+      "sha256": "eb6aa1f880dd685ce5aba5fbf13c68b0a0cc9cc436fb7af98f4b94a47b507e17"
+    },
+    {
+      "name": "observed_price_examples.json",
+      "bytes": 31400,
+      "sha256": "5010dbbb20cd13451a8b5e428e2d391ee9079b1dfa12d27951e3a651c47488ca"
+    },
+    {
+      "name": "scenario_validation.json",
+      "bytes": 482,
+      "sha256": "561e301c4ca0e28efe98f489e56d68d384c136ec48b72245c0ba6e5ff839bec8"
+    }
+  ],
+  "not_for_public_repository": [
+    "openrouter_models_observed.json",
+    "aws_ec2_versions.json",
+    "demirer_2025_working_paper.pdf",
+    "demirer_2025_working_paper.txt"
+  ],
+  "note": "Do not upload an entire research directory. Copy only explicitly approved deliverables; raw third-party corpora and papers are audit inputs, not our work product."
+}

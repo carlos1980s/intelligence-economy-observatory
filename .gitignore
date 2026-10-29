@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+.venv/
+.DS_Store
+# Original private Library inputs/research exports stay local.
+/inputs/
+/outputs/
+/LOCAL_PROTOTYPE_README.md
+/VALIDATION.md
+/dist/
+/node_modules/
+.env
+.env.*
+*.pem
+*.key

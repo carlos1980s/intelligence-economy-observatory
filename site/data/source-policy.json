@@ -1,0 +1,42 @@
+{
+  "version": "2026-10-29.2",
+  "automated_refresh_allowed": true,
+  "reason": "Final source-specific review: official Models API overview describes freely available metadata designed for reliable production integration. Permit bounded user-initiated factual metadata retrieval for six selected IDs with attribution. No full descriptions, benchmark corpus, bulk mirror or recurring collector.",
+  "terms_url": "https://openrouter.ai/terms",
+  "reviewed_at_utc": null,
+  "source_coverage": [
+    {
+      "source": "OpenRouter",
+      "mode": "Selected factual snapshots and bounded user-initiated API refresh; no key",
+      "cadence": "manual on explicit click/CLI only; no recurring job",
+      "freshness_days": 7,
+      "raw_response_public": false
+    },
+    {
+      "source": "AWS public price files",
+      "mode": "Historical matched basket, public factual summary only",
+      "cadence": "versioned releases; no scheduled collector",
+      "capacity_verified": false
+    },
+    {
+      "source": "Census BTOS",
+      "mode": "Context citation; no data imported",
+      "break": "AI question changed in November 2025; exact period qualification required before any merge"
+    },
+    {
+      "source": "BLS public v1",
+      "mode": "Not collected; optional contextual adapter only after specific series verification"
+    },
+    {
+      "source": "Artificial Analysis",
+      "mode": "Omitted; public dashboard/raw redistribution restricted without separate reviewed permission"
+    },
+    {
+      "source": "Silicon Data and Ornn",
+      "mode": "Context only; no public extraction or redistribution"
+    }
+  ],
+  "reviewed_on": "2026-10-29",
+  "recurring_collection_enabled": false,
+  "permission_evidence_url": "https://openrouter.ai/docs/guides/overview/models"
+}

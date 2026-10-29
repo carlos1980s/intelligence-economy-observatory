@@ -1,0 +1,10 @@
+[project]
+name = "gpu-rental-index"
+version = "0.1.0"
+description = "Local observed GPU rental quote indices and synthetic monthly model validation"
+requires-python = ">=3.11"
+dependencies = []
+
+[tool.gpu-index]
+validated-python = "3.14.7"
+formula-version = "matched-equal-base-expenditure-v1"

@@ -1,0 +1,140 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Normalized GPU Quote CSV row v1",
+  "type": "object",
+  "required": [
+    "provider",
+    "provider_category",
+    "region",
+    "gpu",
+    "gpu_memory",
+    "host_bundle",
+    "gpu_count",
+    "interconnect",
+    "os",
+    "tenancy",
+    "commitment",
+    "commitment_months",
+    "currency",
+    "unit",
+    "price",
+    "availability_evidence",
+    "source_url",
+    "source_hash",
+    "source_hash_scope",
+    "observation_date",
+    "publication_date",
+    "effective_date",
+    "period",
+    "launch_date",
+    "licensing",
+    "evidence",
+    "freshness",
+    "instance",
+    "sku",
+    "rate_code"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "provider": {
+      "type": "string"
+    },
+    "provider_category": {
+      "type": "string"
+    },
+    "region": {
+      "type": "string"
+    },
+    "gpu": {
+      "type": "string"
+    },
+    "gpu_memory": {
+      "type": "string"
+    },
+    "host_bundle": {
+      "type": "string"
+    },
+    "gpu_count": {
+      "type": "integer"
+    },
+    "interconnect": {
+      "type": "string"
+    },
+    "os": {
+      "type": "string"
+    },
+    "tenancy": {
+      "type": "string"
+    },
+    "commitment": {
+      "type": "string",
+      "enum": [
+        "on_demand",
+        "interruptible_spot",
+        "term"
+      ]
+    },
+    "commitment_months": {
+      "type": "integer"
+    },
+    "currency": {
+      "type": "string"
+    },
+    "unit": {
+      "type": "string"
+    },
+    "price": {
+      "type": "number"
+    },
+    "availability_evidence": {
+      "type": "string"
+    },
+    "source_url": {
+      "type": "string"
+    },
+    "source_hash": {
+      "type": "string"
+    },
+    "source_hash_scope": {
+      "type": "string"
+    },
+    "observation_date": {
+      "type": "string"
+    },
+    "publication_date": {
+      "type": "string"
+    },
+    "effective_date": {
+      "type": "string"
+    },
+    "period": {
+      "type": "string"
+    },
+    "launch_date": {
+      "type": "string"
+    },
+    "licensing": {
+      "type": "string"
+    },
+    "evidence": {
+      "type": "string",
+      "enum": [
+        "OBSERVED",
+        "MODELLED",
+        "ASSUMED"
+      ]
+    },
+    "freshness": {
+      "type": "string"
+    },
+    "instance": {
+      "type": "string"
+    },
+    "sku": {
+      "type": "string"
+    },
+    "rate_code": {
+      "type": "string"
+    }
+  }
+}

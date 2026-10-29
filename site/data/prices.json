@@ -1,0 +1,673 @@
+{
+  "schema_version": 1,
+  "observed_at": "2026-10-29T06:37:34.324Z",
+  "models": [
+    {
+      "provider_basis": "top-provider offered catalog rate; provider identity may change",
+      "id": "google/gemini-2.5-flash",
+      "canonical_slug": "google/gemini-2.5-flash",
+      "context_length": 1048576,
+      "pricing": {
+        "prompt": "0.0000003",
+        "completion": "0.0000025",
+        "image": "0.0000003",
+        "audio": "0.000001",
+        "input_audio_cache": "0.0000001",
+        "web_search": "0.014",
+        "internal_reasoning": "0.0000025",
+        "input_cache_read": "0.00000003",
+        "input_cache_write": "0.0000000833333333333333"
+      },
+      "expiration_date": null,
+      "input_modalities": [
+        "file",
+        "image",
+        "text",
+        "audio",
+        "video"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Gemini",
+      "reasoning_configuration": null,
+      "published_at_utc": null,
+      "effective_at_utc": null,
+      "service_tier": "catalog default; provider route unspecified",
+      "source_url": "https://openrouter.ai/api/v1/models",
+      "unit": "USD/token",
+      "evidence": "OBSERVED catalog tariff",
+      "capacity_verified": false,
+      "source_id": "openrouter_models",
+      "retrieved_at_utc": "2026-10-29T06:37:34.324Z",
+      "observation_period_start": "2026-10-29T06:37:34.324Z",
+      "observation_period_end": "2026-10-29T06:37:34.324Z",
+      "currency": "USD",
+      "geography": "top provider route unspecified",
+      "population": "six exact incumbent model ID examples; not market representative",
+      "series_definition_version": "2026-10-29.2",
+      "evidence_class": "observed",
+      "raw_sha256": "9f75bcfe48204b2c217811c658dd68f7394276c872e8e2e308164a98ed2a3db6",
+      "value": {
+        "input_usd_per_million": 0.3,
+        "output_usd_per_million": 2.5
+      },
+      "status": "top-provider offered catalog snapshot; not executed price",
+      "license_note": "Selected factual fields and attribution only; approved use must remain within source policy",
+      "fixed_basket_eligible": false,
+      "service_variant": "synchronous catalog base",
+      "pricing_tier": "base; conditional overrides retained",
+      "input_modality": "text",
+      "output_modality": "text",
+      "derived_blended_3_to_1_usd_per_million": 0.85
+    },
+    {
+      "provider_basis": "top-provider offered catalog rate; provider identity may change",
+      "id": "google/gemini-2.5-pro",
+      "canonical_slug": "google/gemini-2.5-pro",
+      "context_length": 1048576,
+      "pricing": {
+        "prompt": "0.00000125",
+        "completion": "0.00001",
+        "image": "0.00000125",
+        "audio": "0.00000125",
+        "input_audio_cache": "0.000000125",
+        "web_search": "0.014",
+        "internal_reasoning": "0.00001",
+        "input_cache_read": "0.000000125",
+        "input_cache_write": "0.000000375",
+        "overrides": [
+          {
+            "min_prompt_tokens": 200000,
+            "prompt": "0.0000025",
+            "completion": "0.000015",
+            "audio": "0.0000025",
+            "input_audio_cache": "0.00000025",
+            "input_cache_read": "0.00000025"
+          }
+        ]
+      },
+      "expiration_date": null,
+      "input_modalities": [
+        "text",
+        "image",
+        "file",
+        "audio",
+        "video"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Gemini",
+      "reasoning_configuration": null,
+      "published_at_utc": null,
+      "effective_at_utc": null,
+      "service_tier": "catalog default; provider route unspecified",
+      "source_url": "https://openrouter.ai/api/v1/models",
+      "unit": "USD/token",
+      "evidence": "OBSERVED catalog tariff",
+      "capacity_verified": false,
+      "source_id": "openrouter_models",
+      "retrieved_at_utc": "2026-10-29T06:37:34.324Z",
+      "observation_period_start": "2026-10-29T06:37:34.324Z",
+      "observation_period_end": "2026-10-29T06:37:34.324Z",
+      "currency": "USD",
+      "geography": "top provider route unspecified",
+      "population": "six exact incumbent model ID examples; not market representative",
+      "series_definition_version": "2026-10-29.2",
+      "evidence_class": "observed",
+      "raw_sha256": "9f75bcfe48204b2c217811c658dd68f7394276c872e8e2e308164a98ed2a3db6",
+      "value": {
+        "input_usd_per_million": 1.25,
+        "output_usd_per_million": 10
+      },
+      "status": "top-provider offered catalog snapshot; not executed price",
+      "license_note": "Selected factual fields and attribution only; approved use must remain within source policy",
+      "fixed_basket_eligible": false,
+      "service_variant": "synchronous catalog base",
+      "pricing_tier": "base; conditional overrides retained",
+      "input_modality": "text",
+      "output_modality": "text",
+      "derived_blended_3_to_1_usd_per_million": 3.4375000000000004
+    },
+    {
+      "provider_basis": "top-provider offered catalog rate; provider identity may change",
+      "id": "deepseek/deepseek-chat-v3-0324",
+      "canonical_slug": "deepseek/deepseek-chat-v3-0324",
+      "context_length": 163840,
+      "pricing": {
+        "prompt": "0.00000029",
+        "completion": "0.00000114",
+        "input_cache_read": "0.00000011"
+      },
+      "expiration_date": null,
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "DeepSeek",
+      "reasoning_configuration": null,
+      "published_at_utc": null,
+      "effective_at_utc": null,
+      "service_tier": "catalog default; provider route unspecified",
+      "source_url": "https://openrouter.ai/api/v1/models",
+      "unit": "USD/token",
+      "evidence": "OBSERVED catalog tariff",
+      "capacity_verified": false,
+      "source_id": "openrouter_models",
+      "retrieved_at_utc": "2026-10-29T06:37:34.324Z",
+      "observation_period_start": "2026-10-29T06:37:34.324Z",
+      "observation_period_end": "2026-10-29T06:37:34.324Z",
+      "currency": "USD",
+      "geography": "top provider route unspecified",
+      "population": "six exact incumbent model ID examples; not market representative",
+      "series_definition_version": "2026-10-29.2",
+      "evidence_class": "observed",
+      "raw_sha256": "9f75bcfe48204b2c217811c658dd68f7394276c872e8e2e308164a98ed2a3db6",
+      "value": {
+        "input_usd_per_million": 0.29,
+        "output_usd_per_million": 1.1400000000000001
+      },
+      "status": "top-provider offered catalog snapshot; not executed price",
+      "license_note": "Selected factual fields and attribution only; approved use must remain within source policy",
+      "fixed_basket_eligible": false,
+      "service_variant": "synchronous catalog base",
+      "pricing_tier": "base; conditional overrides retained",
+      "input_modality": "text",
+      "output_modality": "text",
+      "derived_blended_3_to_1_usd_per_million": 0.5025000000000001
+    },
+    {
+      "provider_basis": "top-provider offered catalog rate; provider identity may change",
+      "id": "meta-llama/llama-3.3-70b-instruct",
+      "canonical_slug": "meta-llama/llama-3.3-70b-instruct",
+      "context_length": 131072,
+      "pricing": {
+        "prompt": "0.0000001",
+        "completion": "0.00000032"
+      },
+      "expiration_date": null,
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Llama3",
+      "reasoning_configuration": null,
+      "published_at_utc": null,
+      "effective_at_utc": null,
+      "service_tier": "catalog default; provider route unspecified",
+      "source_url": "https://openrouter.ai/api/v1/models",
+      "unit": "USD/token",
+      "evidence": "OBSERVED catalog tariff",
+      "capacity_verified": false,
+      "source_id": "openrouter_models",
+      "retrieved_at_utc": "2026-10-29T06:37:34.324Z",
+      "observation_period_start": "2026-10-29T06:37:34.324Z",
+      "observation_period_end": "2026-10-29T06:37:34.324Z",
+      "currency": "USD",
+      "geography": "top provider route unspecified",
+      "population": "six exact incumbent model ID examples; not market representative",
+      "series_definition_version": "2026-10-29.2",
+      "evidence_class": "observed",
+      "raw_sha256": "9f75bcfe48204b2c217811c658dd68f7394276c872e8e2e308164a98ed2a3db6",
+      "value": {
+        "input_usd_per_million": 0.09999999999999999,
+        "output_usd_per_million": 0.32
+      },
+      "status": "top-provider offered catalog snapshot; not executed price",
+      "license_note": "Selected factual fields and attribution only; approved use must remain within source policy",
+      "fixed_basket_eligible": false,
+      "service_variant": "synchronous catalog base",
+      "pricing_tier": "base; conditional overrides retained",
+      "input_modality": "text",
+      "output_modality": "text",
+      "derived_blended_3_to_1_usd_per_million": 0.155
+    },
+    {
+      "provider_basis": "top-provider offered catalog rate; provider identity may change",
+      "id": "openai/gpt-4o-mini",
+      "canonical_slug": "openai/gpt-4o-mini",
+      "context_length": 128000,
+      "pricing": {
+        "prompt": "0.00000015",
+        "completion": "0.0000006",
+        "input_cache_read": "0.000000075"
+      },
+      "expiration_date": null,
+      "input_modalities": [
+        "text",
+        "image",
+        "file"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "GPT",
+      "reasoning_configuration": null,
+      "published_at_utc": null,
+      "effective_at_utc": null,
+      "service_tier": "catalog default; provider route unspecified",
+      "source_url": "https://openrouter.ai/api/v1/models",
+      "unit": "USD/token",
+      "evidence": "OBSERVED catalog tariff",
+      "capacity_verified": false,
+      "source_id": "openrouter_models",
+      "retrieved_at_utc": "2026-10-29T06:37:34.324Z",
+      "observation_period_start": "2026-10-29T06:37:34.324Z",
+      "observation_period_end": "2026-10-29T06:37:34.324Z",
+      "currency": "USD",
+      "geography": "top provider route unspecified",
+      "population": "six exact incumbent model ID examples; not market representative",
+      "series_definition_version": "2026-10-29.2",
+      "evidence_class": "observed",
+      "raw_sha256": "9f75bcfe48204b2c217811c658dd68f7394276c872e8e2e308164a98ed2a3db6",
+      "value": {
+        "input_usd_per_million": 0.15,
+        "output_usd_per_million": 0.6
+      },
+      "status": "top-provider offered catalog snapshot; not executed price",
+      "license_note": "Selected factual fields and attribution only; approved use must remain within source policy",
+      "fixed_basket_eligible": false,
+      "service_variant": "synchronous catalog base",
+      "pricing_tier": "base; conditional overrides retained",
+      "input_modality": "text",
+      "output_modality": "text",
+      "derived_blended_3_to_1_usd_per_million": 0.26249999999999996
+    },
+    {
+      "provider_basis": "top-provider offered catalog rate; provider identity may change",
+      "id": "openai/gpt-4o",
+      "canonical_slug": "openai/gpt-4o",
+      "context_length": 128000,
+      "pricing": {
+        "prompt": "0.0000025",
+        "completion": "0.00001",
+        "input_cache_read": "0.00000125"
+      },
+      "expiration_date": null,
+      "input_modalities": [
+        "text",
+        "image",
+        "file"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "GPT",
+      "reasoning_configuration": null,
+      "published_at_utc": null,
+      "effective_at_utc": null,
+      "service_tier": "catalog default; provider route unspecified",
+      "source_url": "https://openrouter.ai/api/v1/models",
+      "unit": "USD/token",
+      "evidence": "OBSERVED catalog tariff",
+      "capacity_verified": false,
+      "source_id": "openrouter_models",
+      "retrieved_at_utc": "2026-10-29T06:37:34.324Z",
+      "observation_period_start": "2026-10-29T06:37:34.324Z",
+      "observation_period_end": "2026-10-29T06:37:34.324Z",
+      "currency": "USD",
+      "geography": "top provider route unspecified",
+      "population": "six exact incumbent model ID examples; not market representative",
+      "series_definition_version": "2026-10-29.2",
+      "evidence_class": "observed",
+      "raw_sha256": "9f75bcfe48204b2c217811c658dd68f7394276c872e8e2e308164a98ed2a3db6",
+      "value": {
+        "input_usd_per_million": 2.5,
+        "output_usd_per_million": 10
+      },
+      "status": "top-provider offered catalog snapshot; not executed price",
+      "license_note": "Selected factual fields and attribution only; approved use must remain within source policy",
+      "fixed_basket_eligible": false,
+      "service_variant": "synchronous catalog base",
+      "pricing_tier": "base; conditional overrides retained",
+      "input_modality": "text",
+      "output_modality": "text",
+      "derived_blended_3_to_1_usd_per_million": 4.375000000000001
+    }
+  ],
+  "observations": [
+    {
+      "provider_basis": "top-provider offered catalog rate; provider identity may change",
+      "id": "google/gemini-2.5-flash",
+      "canonical_slug": "google/gemini-2.5-flash",
+      "context_length": 1048576,
+      "pricing": {
+        "prompt": "0.0000003",
+        "completion": "0.0000025",
+        "image": "0.0000003",
+        "audio": "0.000001",
+        "input_audio_cache": "0.0000001",
+        "web_search": "0.014",
+        "internal_reasoning": "0.0000025",
+        "input_cache_read": "0.00000003",
+        "input_cache_write": "0.0000000833333333333333"
+      },
+      "expiration_date": null,
+      "input_modalities": [
+        "file",
+        "image",
+        "text",
+        "audio",
+        "video"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Gemini",
+      "reasoning_configuration": null,
+      "published_at_utc": null,
+      "effective_at_utc": null,
+      "service_tier": "catalog default; provider route unspecified",
+      "source_url": "https://openrouter.ai/api/v1/models",
+      "unit": "USD/token",
+      "evidence": "OBSERVED catalog tariff",
+      "capacity_verified": false,
+      "source_id": "openrouter_models",
+      "retrieved_at_utc": "2026-10-29T06:37:34.324Z",
+      "observation_period_start": "2026-10-29T06:37:34.324Z",
+      "observation_period_end": "2026-10-29T06:37:34.324Z",
+      "currency": "USD",
+      "geography": "top provider route unspecified",
+      "population": "six exact incumbent model ID examples; not market representative",
+      "series_definition_version": "2026-10-29.2",
+      "evidence_class": "observed",
+      "raw_sha256": "9f75bcfe48204b2c217811c658dd68f7394276c872e8e2e308164a98ed2a3db6",
+      "value": {
+        "input_usd_per_million": 0.3,
+        "output_usd_per_million": 2.5
+      },
+      "status": "top-provider offered catalog snapshot; not executed price",
+      "license_note": "Selected factual fields and attribution only; approved use must remain within source policy",
+      "fixed_basket_eligible": false,
+      "service_variant": "synchronous catalog base",
+      "pricing_tier": "base; conditional overrides retained",
+      "input_modality": "text",
+      "output_modality": "text",
+      "derived_blended_3_to_1_usd_per_million": 0.85
+    },
+    {
+      "provider_basis": "top-provider offered catalog rate; provider identity may change",
+      "id": "google/gemini-2.5-pro",
+      "canonical_slug": "google/gemini-2.5-pro",
+      "context_length": 1048576,
+      "pricing": {
+        "prompt": "0.00000125",
+        "completion": "0.00001",
+        "image": "0.00000125",
+        "audio": "0.00000125",
+        "input_audio_cache": "0.000000125",
+        "web_search": "0.014",
+        "internal_reasoning": "0.00001",
+        "input_cache_read": "0.000000125",
+        "input_cache_write": "0.000000375",
+        "overrides": [
+          {
+            "min_prompt_tokens": 200000,
+            "prompt": "0.0000025",
+            "completion": "0.000015",
+            "audio": "0.0000025",
+            "input_audio_cache": "0.00000025",
+            "input_cache_read": "0.00000025"
+          }
+        ]
+      },
+      "expiration_date": null,
+      "input_modalities": [
+        "text",
+        "image",
+        "file",
+        "audio",
+        "video"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Gemini",
+      "reasoning_configuration": null,
+      "published_at_utc": null,
+      "effective_at_utc": null,
+      "service_tier": "catalog default; provider route unspecified",
+      "source_url": "https://openrouter.ai/api/v1/models",
+      "unit": "USD/token",
+      "evidence": "OBSERVED catalog tariff",
+      "capacity_verified": false,
+      "source_id": "openrouter_models",
+      "retrieved_at_utc": "2026-10-29T06:37:34.324Z",
+      "observation_period_start": "2026-10-29T06:37:34.324Z",
+      "observation_period_end": "2026-10-29T06:37:34.324Z",
+      "currency": "USD",
+      "geography": "top provider route unspecified",
+      "population": "six exact incumbent model ID examples; not market representative",
+      "series_definition_version": "2026-10-29.2",
+      "evidence_class": "observed",
+      "raw_sha256": "9f75bcfe48204b2c217811c658dd68f7394276c872e8e2e308164a98ed2a3db6",
+      "value": {
+        "input_usd_per_million": 1.25,
+        "output_usd_per_million": 10
+      },
+      "status": "top-provider offered catalog snapshot; not executed price",
+      "license_note": "Selected factual fields and attribution only; approved use must remain within source policy",
+      "fixed_basket_eligible": false,
+      "service_variant": "synchronous catalog base",
+      "pricing_tier": "base; conditional overrides retained",
+      "input_modality": "text",
+      "output_modality": "text",
+      "derived_blended_3_to_1_usd_per_million": 3.4375000000000004
+    },
+    {
+      "provider_basis": "top-provider offered catalog rate; provider identity may change",
+      "id": "deepseek/deepseek-chat-v3-0324",
+      "canonical_slug": "deepseek/deepseek-chat-v3-0324",
+      "context_length": 163840,
+      "pricing": {
+        "prompt": "0.00000029",
+        "completion": "0.00000114",
+        "input_cache_read": "0.00000011"
+      },
+      "expiration_date": null,
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "DeepSeek",
+      "reasoning_configuration": null,
+      "published_at_utc": null,
+      "effective_at_utc": null,
+      "service_tier": "catalog default; provider route unspecified",
+      "source_url": "https://openrouter.ai/api/v1/models",
+      "unit": "USD/token",
+      "evidence": "OBSERVED catalog tariff",
+      "capacity_verified": false,
+      "source_id": "openrouter_models",
+      "retrieved_at_utc": "2026-10-29T06:37:34.324Z",
+      "observation_period_start": "2026-10-29T06:37:34.324Z",
+      "observation_period_end": "2026-10-29T06:37:34.324Z",
+      "currency": "USD",
+      "geography": "top provider route unspecified",
+      "population": "six exact incumbent model ID examples; not market representative",
+      "series_definition_version": "2026-10-29.2",
+      "evidence_class": "observed",
+      "raw_sha256": "9f75bcfe48204b2c217811c658dd68f7394276c872e8e2e308164a98ed2a3db6",
+      "value": {
+        "input_usd_per_million": 0.29,
+        "output_usd_per_million": 1.1400000000000001
+      },
+      "status": "top-provider offered catalog snapshot; not executed price",
+      "license_note": "Selected factual fields and attribution only; approved use must remain within source policy",
+      "fixed_basket_eligible": false,
+      "service_variant": "synchronous catalog base",
+      "pricing_tier": "base; conditional overrides retained",
+      "input_modality": "text",
+      "output_modality": "text",
+      "derived_blended_3_to_1_usd_per_million": 0.5025000000000001
+    },
+    {
+      "provider_basis": "top-provider offered catalog rate; provider identity may change",
+      "id": "meta-llama/llama-3.3-70b-instruct",
+      "canonical_slug": "meta-llama/llama-3.3-70b-instruct",
+      "context_length": 131072,
+      "pricing": {
+        "prompt": "0.0000001",
+        "completion": "0.00000032"
+      },
+      "expiration_date": null,
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Llama3",
+      "reasoning_configuration": null,
+      "published_at_utc": null,
+      "effective_at_utc": null,
+      "service_tier": "catalog default; provider route unspecified",
+      "source_url": "https://openrouter.ai/api/v1/models",
+      "unit": "USD/token",
+      "evidence": "OBSERVED catalog tariff",
+      "capacity_verified": false,
+      "source_id": "openrouter_models",
+      "retrieved_at_utc": "2026-10-29T06:37:34.324Z",
+      "observation_period_start": "2026-10-29T06:37:34.324Z",
+      "observation_period_end": "2026-10-29T06:37:34.324Z",
+      "currency": "USD",
+      "geography": "top provider route unspecified",
+      "population": "six exact incumbent model ID examples; not market representative",
+      "series_definition_version": "2026-10-29.2",
+      "evidence_class": "observed",
+      "raw_sha256": "9f75bcfe48204b2c217811c658dd68f7394276c872e8e2e308164a98ed2a3db6",
+      "value": {
+        "input_usd_per_million": 0.09999999999999999,
+        "output_usd_per_million": 0.32
+      },
+      "status": "top-provider offered catalog snapshot; not executed price",
+      "license_note": "Selected factual fields and attribution only; approved use must remain within source policy",
+      "fixed_basket_eligible": false,
+      "service_variant": "synchronous catalog base",
+      "pricing_tier": "base; conditional overrides retained",
+      "input_modality": "text",
+      "output_modality": "text",
+      "derived_blended_3_to_1_usd_per_million": 0.155
+    },
+    {
+      "provider_basis": "top-provider offered catalog rate; provider identity may change",
+      "id": "openai/gpt-4o-mini",
+      "canonical_slug": "openai/gpt-4o-mini",
+      "context_length": 128000,
+      "pricing": {
+        "prompt": "0.00000015",
+        "completion": "0.0000006",
+        "input_cache_read": "0.000000075"
+      },
+      "expiration_date": null,
+      "input_modalities": [
+        "text",
+        "image",
+        "file"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "GPT",
+      "reasoning_configuration": null,
+      "published_at_utc": null,
+      "effective_at_utc": null,
+      "service_tier": "catalog default; provider route unspecified",
+      "source_url": "https://openrouter.ai/api/v1/models",
+      "unit": "USD/token",
+      "evidence": "OBSERVED catalog tariff",
+      "capacity_verified": false,
+      "source_id": "openrouter_models",
+      "retrieved_at_utc": "2026-10-29T06:37:34.324Z",
+      "observation_period_start": "2026-10-29T06:37:34.324Z",
+      "observation_period_end": "2026-10-29T06:37:34.324Z",
+      "currency": "USD",
+      "geography": "top provider route unspecified",
+      "population": "six exact incumbent model ID examples; not market representative",
+      "series_definition_version": "2026-10-29.2",
+      "evidence_class": "observed",
+      "raw_sha256": "9f75bcfe48204b2c217811c658dd68f7394276c872e8e2e308164a98ed2a3db6",
+      "value": {
+        "input_usd_per_million": 0.15,
+        "output_usd_per_million": 0.6
+      },
+      "status": "top-provider offered catalog snapshot; not executed price",
+      "license_note": "Selected factual fields and attribution only; approved use must remain within source policy",
+      "fixed_basket_eligible": false,
+      "service_variant": "synchronous catalog base",
+      "pricing_tier": "base; conditional overrides retained",
+      "input_modality": "text",
+      "output_modality": "text",
+      "derived_blended_3_to_1_usd_per_million": 0.26249999999999996
+    },
+    {
+      "provider_basis": "top-provider offered catalog rate; provider identity may change",
+      "id": "openai/gpt-4o",
+      "canonical_slug": "openai/gpt-4o",
+      "context_length": 128000,
+      "pricing": {
+        "prompt": "0.0000025",
+        "completion": "0.00001",
+        "input_cache_read": "0.00000125"
+      },
+      "expiration_date": null,
+      "input_modalities": [
+        "text",
+        "image",
+        "file"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "GPT",
+      "reasoning_configuration": null,
+      "published_at_utc": null,
+      "effective_at_utc": null,
+      "service_tier": "catalog default; provider route unspecified",
+      "source_url": "https://openrouter.ai/api/v1/models",
+      "unit": "USD/token",
+      "evidence": "OBSERVED catalog tariff",
+      "capacity_verified": false,
+      "source_id": "openrouter_models",
+      "retrieved_at_utc": "2026-10-29T06:37:34.324Z",
+      "observation_period_start": "2026-10-29T06:37:34.324Z",
+      "observation_period_end": "2026-10-29T06:37:34.324Z",
+      "currency": "USD",
+      "geography": "top provider route unspecified",
+      "population": "six exact incumbent model ID examples; not market representative",
+      "series_definition_version": "2026-10-29.2",
+      "evidence_class": "observed",
+      "raw_sha256": "9f75bcfe48204b2c217811c658dd68f7394276c872e8e2e308164a98ed2a3db6",
+      "value": {
+        "input_usd_per_million": 2.5,
+        "output_usd_per_million": 10
+      },
+      "status": "top-provider offered catalog snapshot; not executed price",
+      "license_note": "Selected factual fields and attribution only; approved use must remain within source policy",
+      "fixed_basket_eligible": false,
+      "service_variant": "synchronous catalog base",
+      "pricing_tier": "base; conditional overrides retained",
+      "input_modality": "text",
+      "output_modality": "text",
+      "derived_blended_3_to_1_usd_per_million": 4.375000000000001
+    }
+  ],
+  "parser_version": "2026-10-29.2",
+  "coverage": {
+    "expected": 6,
+    "observed": 6,
+    "missing_ids": []
+  },
+  "refresh_state": "success",
+  "last_attempt_at": "2026-10-29T06:37:34.324Z",
+  "source": "OpenRouter top-provider offered catalog; not executed prices",
+  "streaming": false,
+  "universe_definition": "Default text-output model catalog; not all modalities or a representative market"
+}
